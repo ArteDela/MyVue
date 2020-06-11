@@ -12,5 +12,8 @@
 		border:none;
 		outline: none;
 		font-size: 16px;
+		font-family: 'Roboto';
+		font-weight: normal;
+		cursor: pointer;
 	}
 </style>

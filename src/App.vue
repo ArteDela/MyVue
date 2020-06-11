@@ -17,7 +17,28 @@
 			return{
 				monthsArr: ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня",
 				"Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"],
-				todos:[],
+				todos:[
+					{
+						id:1,
+						title:'Выспаться',
+						isActive:false
+					},
+					{
+						id:2,
+						title:'ЧТо то еще замутить',
+						isActive:false
+					},
+					{
+						id:3,
+						title:'Пожать 200кг',
+						isActive:false
+					},
+					{
+						id:4,
+						title:'Убить Билла',
+						isActive:false
+					},
+				],
 				todosTomorrow:[
 					{
 						id:'',
@@ -35,7 +56,7 @@
 						isActive:false
 					}
 				],
-				nextID: 1,
+				nextID: 5,
 				tomorrowDate: new Date().getMonth(),
 				tomorrowDay: new Date().getDate(),
 				tomorrowYear: new Date().getFullYear(),
@@ -51,6 +72,9 @@
 					isActive:false
 				})
 			},
+			myDate(){
+
+			}
 		},
 		components: {
 			TodoList,//указываю таким образом потому что ключ и значение совпадают
@@ -60,10 +84,33 @@
 </script>
 
 <style>
+@font-face {
+	font-family: 'Roboto';
+	src: url('~@/fonts/Roboto/Regular/Roboto-Regular.eot');
+	src: url('~@/fonts/Roboto/Regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+		url('~@/fonts/Roboto/Regular/Roboto-Regular.woff2') format('woff2'),
+		url('~@/fonts/Roboto/Regular/Roboto-Regular.woff') format('woff'),
+		url('~@/fonts/Roboto/Regular/Roboto-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('~@/fonts/Roboto/Bold/Roboto-Bold.eot');
+	src: url('~@/fonts/Roboto/Bold/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+		url('~@/fonts/Roboto/Bold/Roboto-Bold.woff2') format('woff2'),
+		url('~@/fonts/Roboto/Bold/Roboto-Bold.woff') format('woff'),
+		url('~@/fonts/Roboto/Bold/Roboto-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+body
+{
+	background: #E5E5E5;
+}
 #app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Roboto';
 	margin: auto;
 	text-align: center;
 	padding: 20px;
@@ -71,10 +118,11 @@
 	margin-top: 60px;
 	width: 473px;
 	border-radius: 4px;
-	box-shadow:  0 0 10px black
+	background:white;
 }
 span
 {
+    font-family: 'Roboto';
 	font-weight: bold;
 }
 label{font-size: 14px}
